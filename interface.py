@@ -1,4 +1,4 @@
-def limix.gwas.scan(y, G, F, K, lik='normal', step=1,
+def limix.gwas.scan(y, G, F, K, step=1,
                     progress=True, batch_size=1000):
     """Performs genome-wide scan assuming additive model.
 
@@ -7,7 +7,6 @@ def limix.gwas.scan(y, G, F, K, lik='normal', step=1,
         F (array_like): nxp array of covariates.
         G (array_like): nxk array of genetic variants.
         K (limix_covariance): covariance.
-        lik (str): 'normal', 'bernoulli', 'binomial', or 'poisson'. Defaults to 'normal'.
         step (int): number of variants per test.
         progress (bool): show progress.
         batch_size (int): number of tests per batch. Larger means faster but
@@ -24,7 +23,7 @@ def limix.gwas.scan(y, G, F, K, lik='normal', step=1,
     pass
 
 
-def limix.gwas.scan_interaction(y, G, F, K, lik='normal', step=1, isize=1, progress=True):
+def limix.gwas.scan_interaction(y, G, F, K, step=1, isize=1, progress=True):
     """Performs genome-wide scan assuming interaction between genetics.
 
     Args:
@@ -32,7 +31,6 @@ def limix.gwas.scan_interaction(y, G, F, K, lik='normal', step=1, isize=1, progr
         F (array_like): nxp array of covariates.
         G (array_like): nxk array of genetic variants.
         K (limix_covariance): covariance.
-        lik (str): 'normal', 'bernoulli', 'binomial', or 'poisson'. Defaults to 'normal'.
         isize (int): number of interacting variants.
         progress (bool): show progress.
         batch_size (int): number of tests per batch. Larger means faster but
@@ -48,7 +46,7 @@ def limix.gwas.scan_interaction(y, G, F, K, lik='normal', step=1, isize=1, progr
     """
     pass
 
-def limix.gwas.scan_gxe(y, G, F, K, lik='normal', step=1, isize=1, progress=True):
+def limix.gwas.scan_gxe(y, G, F, K, step=1, isize=1, progress=True):
     """Performs genome-wide scan assuming genetic-environment interaction.
 
     Args:
@@ -56,7 +54,6 @@ def limix.gwas.scan_gxe(y, G, F, K, lik='normal', step=1, isize=1, progress=True
         F (array_like): nxp array of covariates.
         G (array_like): nxk array of genetic variants.
         K (limix_covariance): covariance.
-        lik (str): 'normal', 'bernoulli', 'binomial', or 'poisson'. Defaults to 'normal'.
         isize (int): number of interacting variants.
         progress (bool): show progress.
         batch_size (int): number of tests per batch. Larger means faster but
