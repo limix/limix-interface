@@ -88,23 +88,22 @@ def limix.io.read_limix_hdf5(filename, progress=True):
         data:     geno/pheno
     """
 
-            sample1 sample2 sample3
-phenoID1     # XXX: yyy      uuuu
-phenoID2
-
-
-            annot1 annot2 annot3
-phenoID1    small
-phenoID2
+#             sample1 sample2 sample3
+# phenoID1     # XXX: yyy      uuuu
+# phenoID2
+#
+#
+#             annot1 annot2 annot3
+# phenoID1    small
+# phenoID2
 
 def limix.io.read_csv(filename, cols=[], memory=True, rows=[]):
     # Danilo solution:
     # df = dask.read_csv(urlpath[, blocksize, collection, ...])
     # df is a dask DataFrame.
-
-    # Paolo solutiono:
-    #1. col_headers -> pandas dataframe
-    #2. row_headers -> pandas dataframe
+    # Example of usage
+    # csv = read_csv(pheno_file) # not in memory 60,000 x 1,000
+    pass
 
 def limix.io.read_plink(filename, progress=True):
     """
